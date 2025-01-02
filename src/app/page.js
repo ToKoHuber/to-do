@@ -17,14 +17,20 @@ export default function Home() {
   return (
     <div>
       <div className={styles[`todo-container`]}>
-        <h1>To-Do list</h1>
-        <div className={`${styles.flex} ${styles["bg-blue"]}`}>
+        <h1 className={styles[`container-title`]}>To-Do list</h1>
+        <div className={`${styles.flex}`}>
           <input
+            className={styles[`container-input`]}
             type="text"
             placeholder="Add a new task"
             onChange={(e) => setNewTodo(e.target.value)}
           />
-          <button onClick={addTodoHandler}>Add</button>
+          <button
+            className={styles[`container-input-button`]}
+            onClick={addTodoHandler}
+          >
+            Add
+          </button>
         </div>
         <div className={`${styles.flex} ${styles.filterButtons}`}>
           <button
